@@ -27,13 +27,15 @@ This is a simple web application that calculates the factorial of a number using
 1. Clone the repository:
    ```bash
    git clone https://github.com/Stephanie514/Web_Development.git
-   cd factorial-calculator
+   cd factorial-calculator WEEK 1
+   cd Frontend
    ```
 2. Open `index.html` in a browser.
 
 ### **Backend (Optional)**
 1. Navigate to the project folder:
    ```bash
+   cd factorial-calculator WEEK 1
    cd Backend
    ```
 2. Install dependencies:
