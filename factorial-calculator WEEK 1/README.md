@@ -26,7 +26,7 @@ This is a simple web application that calculates the factorial of a number using
 ### **Frontend (Only)**
 1. Clone the repository:
    ```bash
-   git clone https://github.com/user_name/factorial-calculator.git
+   git clone https://github.com/Stephanie514/Web_Development.git
    cd factorial-calculator
    ```
 2. Open `index.html` in a browser.
@@ -78,14 +78,3 @@ GET /factorial?number=5&method=iterative
 1. Enter a **positive integer** in the input field.
 2. Click **Iterative** or **Recursive** to calculate the factorial.
 3. View the result displayed below.
-
-## Contributing
-If you’d like to contribute:
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature-name`.
-3. Commit your changes: `git commit -m "Added new feature"`.
-4. Push to the branch: `git push origin feature-name`.
-5. Open a pull request.
-
-## License
-This project is licensed under the MIT License.
