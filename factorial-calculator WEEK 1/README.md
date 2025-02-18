@@ -34,7 +34,7 @@ This is a simple web application that calculates the factorial of a number using
 ### **Backend (Optional)**
 1. Navigate to the project folder:
    ```bash
-   cd factorial-api
+   cd Backend
    ```
 2. Install dependencies:
    ```bash
