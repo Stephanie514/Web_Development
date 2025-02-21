@@ -1,11 +1,3 @@
-/*require("dotenv").config();
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-
-const app = express();
-app.use(express.json());
-app.use(cors());*/
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -16,79 +8,82 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Connect MongoDB
-// mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-
 // MongoDB Connection
-
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log("✅ MongoDB Connected Successfully"))
-.catch((err) => console.error("❌ MongoDB Connection Error:", err));
+.then(() => console.log("MongoDB Connected Successfully"))
+.catch((err) => console.error("MongoDB Connection Error:", err));
 
+// Routes
 
-/*mongoose
-  .connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("✅ MongoDB Connected Successfully"))
-  .catch((err) => console.error("❌ MongoDB Connection Error:", err));*/
+// Fetch books from Google Books API
+app.get("/search", async (req, res) => {
+  try {
+    const { query } = req.query;
+    const response = await axios.get(
+      `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${process.env.GOOGLE_BOOKS_API_KEY}`
+    );
+    res.json(response.data.items);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching books", error });
+  }
+});
 
-// API Routes
-// app.use("/api/books", require("./routes/BookRoutes"));
+// Add a book to the database
+app.post("/books", async (req, res) => {
+  try {
+    const book = new Book(req.body);
+    await book.save();
+    res.status(201).json(book);
+  } catch (error) {
+    res.status(500).json({ message: "Error adding book", error });
+  }
+});
 
-// GET all books
 app.get("/books", async (req, res) => {
-    try {
-      const books = await Book.find();
-      res.json(books);
-    } catch (error) {
-      res.status(500).json({ error: "Failed to fetch books" });
-    }
-  });
-  
-  // POST - Add a new book
-  /*app.post("/books", async (req, res) => {
-    try {
-      const { title, author, status, progress, goal } = req.body;
-      const newBook = new Book({ title, author, status, progress, goal });
-      await newBook.save();
-      res.status(201).json(newBook);
-    } catch (error) {
-      res.status(500).json({ error: "Failed to add book" });
-    }
-  });*/
+  try {
+    const books = await Book.find();
+    res.json(books);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
-  app.post("/books", async (req, res) => {
-    try {
-      const { title, author } = req.body;
-      if (!title || !author) {
-        return res.status(400).json({ message: "Title and Author are required" });
-      }
-  
-      const book = new Book({ title, author });
-      await book.save();
-      res.status(201).json(book);
-    } catch (error) {
-      console.error("Error adding book:", error);
-      res.status(500).json({ message: "Internal Server Error" });
-    }
-  });
-  
-  
-  // DELETE a book by ID
-  app.delete("/books/:id", async (req, res) => {
-    try {
-      const book = await Book.findByIdAndDelete(req.params.id);
-      if (!book) return res.status(404).json({ error: "Book not found" });
-      res.json({ message: "Book deleted successfully" });
-    } catch (error) {
-      res.status(500).json({ error: "Failed to delete book" });
-    }
-  });  
+app.post("/books", async (req, res) => {
+  try {
+    const { title, author, status, progress, goal } = req.body;
+    const newBook = new Book({ title, author, status, progress, goal });
+    await newBook.save();
+    res.json(newBook);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+app.put("/books/:id/progress", async (req, res) => {
+  try {
+    const { progress } = req.body;
+    const updatedBook = await Book.findByIdAndUpdate(
+      req.params.id,
+      { progress },
+      { new: true }
+    );
+    res.json(updatedBook);
+  } catch (error) {
+    res.status(500).json({ error: "Failed to update progress" });
+  }
+});
+
+app.delete("/books/:id", async (req, res) => {
+  try {
+    await Book.findByIdAndDelete(req.params.id);
+    res.json({ message: "Book deleted" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

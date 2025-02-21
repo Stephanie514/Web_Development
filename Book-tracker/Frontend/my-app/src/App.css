@@ -1,4 +1,4 @@
-/* styles.css */
+/* styles.css 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -25,4 +25,264 @@ h1 {
   background: white;
   border-radius: 8px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.progress-container input {
+  width: 80px;
+  padding: 5px;
+  font-size: 14px;
+  text-align: center;
+}*/
+
+/* 🔹 Background Image
+body {
+  background-image: url('https://source.unsplash.com/1600x900/?library,books');  Change the URL to any image you prefer 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Arial', sans-serif;
+  color: #fff; /* White text for readability 
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔹 Main Container 
+.container {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* 🔹 Title 
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffcc00; /* Gold color for elegance
+}
+
+/* 🔹 Buttons (Search, Add, Delete) 
+.btn {
+  background-color: #ff5733; /* Vibrant orange 
+   color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff3300; /* Darker orange on hover
+}
+
+/* 🔹 Search Bar 
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* 🔹 Book List 
+.book-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.book-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.book-item strong {
+  font-size: 1.2rem;
+}
+
+/* 🔹 Input Fields 
+.input-container input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+/* 🔹 Centering Content 
+.input-container,
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔹 Delete Button 
+.delete-btn {
+  background-color: #d9534f;
+}
+
+.delete-btn:hover {
+  background-color: #c9302c;
+}*/
+
+/* 🔹 Background Styling */
+/* 🔹 Background Styling */
+
+
+/* 🌙 Background Styling */
+/* 🌙 Background Styling */
+body {
+  background-color: #2A2438; /* Soft dark purple */
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+  color: #F0D6C9; /* Soft Blush */
+  margin: 0;
+  padding: 0;
+}
+
+/* 📌 Main Container */
+.container {
+  max-width: 750px;
+  margin: 40px auto;
+  background: rgba(90, 42, 109, 0.9); /* Muted Plum */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* ✨ Title */
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #FFB36D; /* Light Tangerine */
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* 🎨 Buttons */
+.btn {
+  background-color: #803354; /* Warm Mauve */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #C34A6B; /* Soft Coral */
+  transform: scale(1.05); /* Slightly enlarges */
+}
+
+/* 📝 Input Fields */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.input-container input {
+  width: 85%;
+  max-width: 420px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  background: #F0D6C9; /* Soft blush */
+  color: #2A2438; /* Dark text for contrast */
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.input-container input:focus {
+  box-shadow: 0px 0px 10px rgba(255, 179, 109, 0.6); /* Soft glow */
+}
+
+/* 📚 Book List */
+.book-list {
+  list-style-type: none;
+  padding: 0;
+  counter-reset: book-counter;
+}
+
+.book-item {
+  background: rgba(90, 42, 109, 0.15); /* Softer plum contrast */
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  color: #F0D6C9;
+  animation: fadeIn 0.5s ease-in-out;
+  counter-increment: book-counter;
+  position: relative;
+}
+
+/* 📌 Numbering the Books */
+.book-item::before {
+  content: counter(book-counter) ". ";
+  font-weight: bold;
+  color: #FFB36D; /* Light Tangerine */
+  position: absolute;
+  left: 10px;
+}
+
+/* 📌 Book Title */
+.book-item strong {
+  font-size: 1.3rem;
+  margin-left: 25px; /* Shift right due to numbering */
+}
+
+/* 🗑️ Delete Button */
+.delete-btn {
+  background-color: #803354; /* Deep Mauve */
+  padding: 8px 12px;
+}
+
+.delete-btn:hover {
+  background-color: #C34A6B; /* Reddish Coral */
+  transform: scale(1.1);
+}
+
+/* 📌 Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
