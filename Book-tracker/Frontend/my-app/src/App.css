@@ -43,7 +43,7 @@ body {
   transform: scale(1.05); /* Slightly enlarges */
 }
 
-/* 📝 Input Fields */
+/* 📝 Input Fields */ 
 .input-container {
   display: flex;
   flex-direction: column;
