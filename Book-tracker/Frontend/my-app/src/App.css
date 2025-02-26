@@ -1,17 +1,18 @@
+/* 🌙 General Styling */
 body {
-  background-color: #2A2438; /* Soft dark purple */
+  background-color: #272065; /* Deep Blue-Purple */
   background-size: cover;
   font-family: 'Arial', sans-serif;
-  color: #F0D6C9; /* Soft Blush */
+  color: #ABACCA; /* Light Lavender */
   margin: 0;
   padding: 0;
 }
 
 /* 📌 Main Container */
 .container {
-  max-width: 750px;
+  max-width: 800px;
   margin: 40px auto;
-  background: rgba(90, 42, 109, 0.9); /* Muted Plum */
+  background: rgba(34, 36, 66, 0.95); /* Muted Navy */
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -22,51 +23,53 @@ body {
 .title {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #FFB36D; /* Light Tangerine */
+  color: #EDAAD6; /* Soft Pink */
   animation: fadeIn 1s ease-in-out;
 }
 
-/* 🎨 Buttons */
-.btn {
-  background-color: #803354; /* Warm Mauve */
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #C34A6B; /* Soft Coral */
-  transform: scale(1.05); /* Slightly enlarges */
-}
-
-/* 📝 Input Fields */ 
+/* 🔍 Styled Search Bar & Input Fields */
 .input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
 .input-container input {
   width: 85%;
-  max-width: 420px;
+  max-width: 450px;
   padding: 12px;
-  border: none;
-  border-radius: 6px;
+  border: 2px solid #666D9E; /* Purple-Gray */
+  border-radius: 8px;
   text-align: center;
-  background: #F0D6C9; /* Soft blush */
-  color: #2A2438; /* Dark text for contrast */
+  background: #ABACCA; /* Soft Lavender */
+  color: #272065; /* Deep Blue */
   font-size: 1rem;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .input-container input:focus {
-  box-shadow: 0px 0px 10px rgba(255, 179, 109, 0.6); /* Soft glow */
+  box-shadow: 0px 0px 12px rgba(237, 170, 214, 0.7); /* Soft Glow */
+  outline: none;
+}
+
+/* 🎨 Buttons */
+.btn {
+  background: linear-gradient(to right, #666D9E, #EDAAD6);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #EDAAD6, #666D9E);
+  transform: scale(1.05);
 }
 
 /* 📚 Book List */
@@ -77,7 +80,7 @@ body {
 }
 
 .book-item {
-  background: rgba(90, 42, 109, 0.15); /* Softer plum contrast */
+  background: rgba(102, 109, 158, 0.2); /* Softer Contrast */
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
@@ -85,7 +88,7 @@ body {
   align-items: center;
   justify-content: space-between;
   font-size: 1.2rem;
-  color: #F0D6C9;
+  color: #ABACCA;
   animation: fadeIn 0.5s ease-in-out;
   counter-increment: book-counter;
   position: relative;
@@ -95,7 +98,7 @@ body {
 .book-item::before {
   content: counter(book-counter) ". ";
   font-weight: bold;
-  color: #FFB36D; /* Light Tangerine */
+  color: #EDAAD6; /* Soft Pink */
   position: absolute;
   left: 10px;
 }
@@ -103,17 +106,39 @@ body {
 /* 📌 Book Title */
 .book-item strong {
   font-size: 1.3rem;
-  margin-left: 25px; /* Shift right due to numbering */
+  margin-left: 30px; /* Shift right due to numbering */
+}
+
+/* 🎯 Goal & Pages Read Input */
+.goal-input {
+  width: 60%;
+  max-width: 300px;
+  padding: 10px;
+  border: 2px solid #666D9E;
+  border-radius: 8px;
+  background: #ABACCA;
+  color: #272065;
+  font-size: 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.goal-input:focus {
+  box-shadow: 0px 0px 10px rgba(237, 170, 214, 0.7);
+  outline: none;
 }
 
 /* 🗑️ Delete Button */
 .delete-btn {
-  background-color: #803354; /* Deep Mauve */
+  background-color: #EDAAD6;
+  color: #222442;
   padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
 .delete-btn:hover {
-  background-color: #C34A6B; /* Reddish Coral */
+  background-color: #ABACCA;
   transform: scale(1.1);
 }
 
