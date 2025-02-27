@@ -60,7 +60,7 @@ const BookList = () => {
     <div className="container">
       <h1> 📚 Welcome to Your Personal Library!</h1>
       <h2> 📚 Track Your Reading Progress 📚</h2>
-      <p>Search, add and track your reading journey with ease.</p>
+      <h3>Search, add and track your reading journey with ease.</h3>
 
       {/* Search Component */}
       <BookSearch onAddBook={addBook} />
@@ -90,10 +90,10 @@ const BookList = () => {
 
       {/* Book List with Reading Goal*/ }
       <ul className="book-list">
-        {books.map((book) => (
+        {books.map((book, index) => (
           <li key={book._id} className="book-item">
             <span>
-              <strong>{book.title}</strong> by {book.author}
+              <strong>{index + 1}. {book.title}</strong> by {book.author}
             </span>
             <div className="progress-container">
               <span>📖 Pages Read: {book.progress}</span>

@@ -1,146 +1,198 @@
-/* 🌙 General Styling */
+/* 🌟 General Styling */
 body {
-  background-color: #272065; /* Deep Blue-Purple */
+  background-color: #222442; /* Deep Indigo */
   background-size: cover;
   font-family: 'Arial', sans-serif;
-  color: #ABACCA; /* Light Lavender */
+  color: #EDAAD6; /* Soft Pink */
   margin: 0;
   padding: 0;
 }
 
 /* 📌 Main Container */
 .container {
-  max-width: 800px;
+  max-width: 750px;
   margin: 40px auto;
-  background: rgba(34, 36, 66, 0.95); /* Muted Navy */
+  background: rgba(39, 32, 101, 0.95); /* Rich Navy with transparency */
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
-/* ✨ Title */
-.title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #EDAAD6; /* Soft Pink */
+/* 📚 Titles */
+h1, h2 {
+  color: #ABACCA; /* Soft Muted Lavender */
   animation: fadeIn 1s ease-in-out;
 }
 
-/* 🔍 Styled Search Bar & Input Fields */
-.input-container {
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* 📌 Description */
+p {
+  font-size: 1rem;
+  color: #ABACCA;
+  margin-bottom: 20px;
+}
+
+/* 🔍 Search & Input Fields */
+.search-container, .input-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 25px;
+  gap: 5px;
+  margin-bottom: 10px;
 }
 
-.input-container input {
-  width: 85%;
-  max-width: 450px;
+input {
+  width: 55%;
+  max-width: 420px;
   padding: 12px;
-  border: 2px solid #666D9E; /* Purple-Gray */
+  border: 2px solid #666D9E; /* Periwinkle Border */
   border-radius: 8px;
   text-align: center;
-  background: #ABACCA; /* Soft Lavender */
-  color: #272065; /* Deep Blue */
+  background: #EDAAD6; /* Soft Pink */
+  color: #272065; /* Deep Indigo Text */
   font-size: 1rem;
-  transition: all 0.3s ease;
+  font-weight: bold;
+  transition: box-shadow 0.3s ease, border 0.3s ease;
 }
 
-.input-container input:focus {
-  box-shadow: 0px 0px 12px rgba(237, 170, 214, 0.7); /* Soft Glow */
+input:focus {
+  border-color: #ABACCA; /* Lavender Highlight */
+  box-shadow: 0px 0px 10px rgba(171, 172, 202, 0.6);
   outline: none;
 }
 
 /* 🎨 Buttons */
 .btn {
-  background: linear-gradient(to right, #666D9E, #EDAAD6);
+  background-color: #666D9E; /* Soft Periwinkle */
   color: white;
-  padding: 12px 18px;
+  padding: 10px 15px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
   transition: transform 0.2s ease, background-color 0.3s ease;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 .btn:hover {
-  background: linear-gradient(to right, #EDAAD6, #666D9E);
+  background-color: #ABACCA; /* Muted Light Blue */
   transform: scale(1.05);
 }
 
-/* 📚 Book List */
-.book-list {
-  list-style-type: none;
-  padding: 0;
-  counter-reset: book-counter;
+.add-btn {
+  background-color: #666D9E;
+  padding: 8px 12px;
 }
 
-.book-item {
-  background: rgba(102, 109, 158, 0.2); /* Softer Contrast */
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.2rem;
-  color: #ABACCA;
-  animation: fadeIn 0.5s ease-in-out;
-  counter-increment: book-counter;
-  position: relative;
+.add-btn:hover {
+  background-color: #ABACCA;
+  transform: scale(1.1);
 }
 
-/* 📌 Numbering the Books */
-.book-item::before {
-  content: counter(book-counter) ". ";
-  font-weight: bold;
-  color: #EDAAD6; /* Soft Pink */
-  position: absolute;
-  left: 10px;
-}
-
-/* 📌 Book Title */
-.book-item strong {
-  font-size: 1.3rem;
-  margin-left: 30px; /* Shift right due to numbering */
-}
-
-/* 🎯 Goal & Pages Read Input */
-.goal-input {
-  width: 60%;
-  max-width: 300px;
-  padding: 10px;
-  border: 2px solid #666D9E;
-  border-radius: 8px;
-  background: #ABACCA;
-  color: #272065;
-  font-size: 1rem;
-  text-align: center;
-  transition: box-shadow 0.3s ease;
-}
-
-.goal-input:focus {
-  box-shadow: 0px 0px 10px rgba(237, 170, 214, 0.7);
-  outline: none;
-}
-
-/* 🗑️ Delete Button */
 .delete-btn {
   background-color: #EDAAD6;
   color: #222442;
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: all 0.3s ease;
 }
 
 .delete-btn:hover {
   background-color: #ABACCA;
   transform: scale(1.1);
 }
+
+/* 📚 Book List */
+.book-list {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.book-item {
+  background: rgba(39, 32, 101, 0.8); /* Deep Indigo */
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  color: #EDAAD6; /* Soft Pink */
+  animation: fadeIn 0.5s ease-in-out;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  animation: fadeIn 0.5s ease-in-out;
+  counter-increment: book-counter;
+  position: relative;
+}
+
+/* 📖 Reading Progress */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.search-results {
+  list-style-type: none;
+  padding: 0;
+  width: 100%
+}
+
+.search-item {
+  counter-increment: book-counter;
+  position: relative;
+  padding-left: 25px; /* Space for numbering*/ 
+}
+
+.search-item::before {
+  content: counter(book-counter) ". ";
+  font-weight: bold;
+  color: #ABACCA;
+  position: absolute;
+  left: 0;
+}
+
+/* 📚 Search Results
+.search-results {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+
+.search-item {
+  background: rgba(39, 32, 101, 0.8);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #EDAAD6;
+  animation: fadeIn 0.5s ease-in-out;
+  position: relative;
+}
+
+/* 📌 Numbering the Searched Books
+.search-item::before {
+  counter-increment: search-counter;
+  content: counter(search-counter) ". ";
+  font-weight: bold;
+  color: #ABACCA;
+  position: absolute;
+  left: 10px;
+}*/
 
 /* 📌 Animations */
 @keyframes fadeIn {
