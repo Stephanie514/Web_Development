@@ -1,0 +1,58 @@
+/*@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}*/
+
+/*@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* General Page Styles 
+body {
+  @apply bg-gradient-to-r from-purple-600 to-pink-500 text-gray-900;
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Code Block Styling 
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Custom Styles
+.container {
+  @apply max-w-2xl mx-auto p-6;
+}
+
+.card {
+  @apply bg-white shadow-lg rounded-lg p-6;
+}
+
+.button {
+  @apply bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition;
+}
+
+.input {
+  @apply w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-purple-500;
+}
+
+/* Topic List Styling 
+.topic-item {
+  @apply p-3 bg-gray-100 rounded-md border-l-4 border-purple-600 text-gray-700 shadow-sm;
+}*/
