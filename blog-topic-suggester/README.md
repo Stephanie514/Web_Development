@@ -56,7 +56,7 @@ npm install
 ```
 
 ### **3️⃣ Set Up Environment Variables**
-Create a `.env` file in the `baclend` directory and add:
+Create a `.env` file in the `backend` directory and add:
 ```env
 API_KEY=your_news_api_key
 ```
