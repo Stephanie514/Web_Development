@@ -70,12 +70,6 @@ GET /factorial?number=5&method=iterative
 3. Connect your GitHub repository.
 4. Deploy your site and get a live URL.
 
-### **Backend Deployment (Render)**
-1. Push your backend code to GitHub.
-2. Go to [Render](https://render.com) and create a new **Web Service**.
-3. Connect your GitHub repository.
-4. Deploy and get a live API URL.
-
 ## Usage
 1. Enter a **positive integer** in the input field.
 2. Click **Iterative** or **Recursive** to calculate the factorial.
